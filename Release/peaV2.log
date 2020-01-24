@@ -1,0 +1,22 @@
+﻿  AntSearch.cpp
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.h(19,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.cpp(104,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.cpp(118,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.cpp(128,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.cpp(160,18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  peaV2.cpp
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.cpp(186,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Andrzej\source\repos\peaV2\AntSearch.h(19,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(328,17): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(328,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(341,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(345,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(379,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Andrzej\source\repos\peaV2\peaV2.cpp(392,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating code
+  2 of 590 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  peaV2.vcxproj -> C:\Users\Andrzej\source\repos\peaV2\Release\peaV2.exe

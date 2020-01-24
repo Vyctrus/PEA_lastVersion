@@ -1,0 +1,23 @@
+void binaryTreeTest() {
+	BinaryHeap* myHeap = new BinaryHeap;
+	myHeap->addMin(9);
+	myHeap->addMin(8);
+	myHeap->addMin(7);
+	myHeap->addMin(6);
+	myHeap->addMin(19);
+	myHeap->addMin(69);
+	myHeap->addMin(2);
+	myHeap->addMin(4);
+	myHeap->display3();
+	std::cout << "uno: " << myHeap->getTopValue()<< std::endl;
+	std::cout << "uno: " << myHeap->getTopValue() << std::endl;
+	std::cout << "uno: " << myHeap->getTopValue() << std::endl;
+	std::cout << "uno: " << myHeap->getTopValue() << std::endl;
+}
+
+void BranchAndBoundTest() {//ten jest zly-nie dziala
+	Graph* myGraph = new Graph(3);
+	myGraph->loadGraphFromFile();
+	BranchAndBound* test = new BranchAndBound();
+	test->startAlgorithm(myGraph);
+}

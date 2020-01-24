@@ -1,0 +1,579 @@
+Tworze macierz o rozmiarze :4
+Wykonujê g³owny przebieg numer:0
+Dla permutacji: 0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Rozwiazanie lepsze niz do tej pory- zapisuje: 160
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Rozwiazanie lepsze niz do tej pory- zapisuje: 134
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 2130
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0231
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Rozwiazanie lepsze niz do tej pory- zapisuje: 125
+Cofam do poprzedniej permutacji:0132
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 0
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Aktualizuje najlepszego sasiada: 1032
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 3102
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 2130
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0231
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 0123
+Cofam do poprzedniej permutacji:0132
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 2 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 1023
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0321
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:0123
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 1
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1203
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1320
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:1023
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 3012
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2310
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2031
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:2013
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 0312
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 3102
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3210
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:3012
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 1 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 1302
+Licze obecny koszt permutacji: 151
+Aktualizuje najlepszego sasiada: 1302
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 0132
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 3012
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3201
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:3102
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 1 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 0312
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3210
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:3012
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 3
+Zmniejszam liczbe pozostalych krokow
+Wykonujê g³owny przebieg numer:1
+Dla permutacji: 3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 0321
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 2031
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 3201
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:3021
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Cofam do poprzedniej permutacji:3021
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 0
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Aktualizuje najlepszego sasiada: 0213
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 1023
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 3012
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2310
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2031
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:2013
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 0312
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 3102
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3210
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:3012
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 1 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 1302
+Licze obecny koszt permutacji: 151
+Aktualizuje najlepszego sasiada: 1302
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 0132
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3201
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:3102
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Aktualizuje najlepszego sasiada: 1032
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 2130
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0231
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 0231
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 0123
+Cofam do poprzedniej permutacji:0132
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 2 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 1023
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0321
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:0123
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 1
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 0123
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1203
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1320
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:1023
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 1
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Aktualizuje najlepszego sasiada: 2103
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 3120
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Aktualizuje najlepszego sasiada: 0213
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0321
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 0132
+Cofam do poprzedniej permutacji:0123
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 2 3
+Zmniejszam liczbe pozostalych krokow
+Wykonujê g³owny przebieg numer:2
+Dla permutacji: 2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 0231
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 2301
+Licze obecny koszt permutacji: 125
+Cofam do poprzedniej permutacji:2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 2130
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:2031
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:2031
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 0
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Aktualizuje najlepszego sasiada: 1032
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 3102
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 2130
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0231
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:0132
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 0123
+Cofam do poprzedniej permutacji:0132
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 2 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 1023
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0321
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:0123
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:0123
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 1
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 0123
+Licze obecny koszt permutacji: 125
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1203
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1320
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:1023
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:1023
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 0213
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 1023
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 3012
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2310
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:2013
+Sprwadzam sasiada(swapuje aby go uzyskac): 2031
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:2013
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 3
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 0312
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Aktualizuje najlepszego sasiada: 3102
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3210
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:3012
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 1 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 1302
+Licze obecny koszt permutacji: 151
+Aktualizuje najlepszego sasiada: 1302
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 0132
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 0132
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 2103
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3012
+Licze obecny koszt permutacji: 125
+Aktualizuje najlepszego sasiada: 3012
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3201
+Licze obecny koszt permutacji: 148
+Cofam do poprzedniej permutacji:3102
+Sprwadzam sasiada(swapuje aby go uzyskac): 3120
+Licze obecny koszt permutacji: 154
+Cofam do poprzedniej permutacji:3102
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 1 2
+Zmniejszam liczbe pozostalych krokow
+Dla permutacji: 3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 0312
+Licze obecny koszt permutacji: 154
+Aktualizuje najlepszego sasiada: 0312
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 1032
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 2013
+Licze obecny koszt permutacji: 148
+Aktualizuje najlepszego sasiada: 2013
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3102
+Licze obecny koszt permutacji: 134
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3210
+Licze obecny koszt permutacji: 160
+Cofam do poprzedniej permutacji:3012
+Sprwadzam sasiada(swapuje aby go uzyskac): 3021
+Licze obecny koszt permutacji: 151
+Cofam do poprzedniej permutacji:3012
+Przechodzê do nastêpnej permutacji
+BLokuje tabu list na parametrach: 0 3
+Zmniejszam liczbe pozostalych krokow

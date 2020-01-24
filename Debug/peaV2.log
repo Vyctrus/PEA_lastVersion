@@ -1,0 +1,12 @@
+﻿  Simulated_Annealing.cpp
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.h(2,10): warning C4067: nieoczekiwane tokeny występujące po dyrektywie preprocesora - oczekiwano nowego wiersza
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(20,18): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(27,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(79,26): warning C4244: "*=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(82,17): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(92,18): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(100,14): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(101,17): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(151,26): warning C4244: "*=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Andrzej\source\repos\peaV2\Simulated_Annealing.cpp(154,17): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+  peaV2.vcxproj -> C:\Users\Andrzej\source\repos\peaV2\Debug\peaV2.exe
