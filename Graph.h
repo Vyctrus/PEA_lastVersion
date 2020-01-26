@@ -1,4 +1,7 @@
 #pragma once
+#include<iostream>
+using namespace std;
+
 class Graph//projected as matrix buddy
 {
 	private:
@@ -14,6 +17,7 @@ class Graph//projected as matrix buddy
 		void createRandomGraph(int addSmth);
 
 		void loadGraphFromFile();
+		void loadGraphFromFileS(string graphName);
 		void saveToFile();
 
 		int getValueOfEdge(int startPoint, int endPoint);

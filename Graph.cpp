@@ -88,6 +88,30 @@ void Graph::loadGraphFromFile()
 	}
 }
 
+void Graph::loadGraphFromFileS(string graphName)
+{
+	std::string fileName;
+	//std::cout << "Podaj filename : ";
+	//std::cin >> fileName;
+	fileName = graphName;
+	std::fstream file;
+	file.open(fileName, std::ios::in);
+	if (file.good() == true) {
+		int a;
+		if (file >> a)
+		{
+			//printf("%d ", a);
+		}
+		updateGraph(a);
+		for (int i = 0; i < numbOfVerts; i++) {
+			for (int j = 0; j < numbOfVerts; j++) {
+				file >> matrix[i][j];
+			}
+		}
+
+	}
+}
+
 void Graph::saveToFile()
 {
 	string fileName;

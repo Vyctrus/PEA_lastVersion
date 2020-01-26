@@ -17,11 +17,11 @@ vector<int> AntSearch::makeRandPermut(int size_of_permutation)
 
 void AntSearch::antAlgorithm(Graph* newGraphData)
 {
-	//Inicjalizacja
 	myGraph = newGraphData;
 	matrixSize = myGraph->getNumbOfVerts();	//to sie nie zmieni w trakcie iteracji nzm
 	numberOfAnts = matrixSize;//nzm
 	qPheromone = matrixSize;//nzm
+	roPheromone = 0.5; //sta³a parowania
 	numberOfAntIterations = 100;//nzm
 
 	bestSolution = makeRandPermut(matrixSize);//utworzenie startowej permutacji //permutation;
@@ -33,10 +33,8 @@ void AntSearch::antAlgorithm(Graph* newGraphData)
 		pheromonMatrix[i].resize(matrixSize, tauZero);
 	}
 	//Wszedzie jest ju¿ feromon w macierzy feromonów zgodnie ze wskazaniami Dorigo
-
-
 	for (int i = 0; i < numberOfAntIterations; i++) {
-		cout << "ANT ITERATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----------: " << i << "\n";
+		//cout << "ANT ITERATION!-----------: " << i << "\n";
 		deltaPheromon.resize(matrixSize);//to ma sie wyzerowac
 		for (int j = 0; j < matrixSize; j++) {
 			deltaPheromon[j].resize(matrixSize, 0);
@@ -50,14 +48,11 @@ void AntSearch::antAlgorithm(Graph* newGraphData)
 			// tworzymy mrowke, ktora wie juz skad idzie, ma swoj¹ tabu liste, ma swoj numer
 			Ant *myAnt = new Ant(getRandomStart(singleAnt),singleAnt,matrixSize);
 
-			//MrowkaIdzie
 			//MrówkaWybieraSobieDrogê w oparciu o graf- widocznosc, feromony zostawione przez przodków
-
-			iterationPermutations[singleAnt]= antJourney(myAnt);//tutaj------------ tu bylo i zamiast singleAnt
+			iterationPermutations[singleAnt]= antJourney(myAnt);
 
 			//Koniec drogi
 			//wynikiem tego jest jakas permutacja zapisana do Iterationpermutation[i]
-
 			//Wrzuæ feromony do deltaPheromons
 			updateDeltaPheromones(iterationPermutations[singleAnt]);
 
@@ -77,23 +72,97 @@ void AntSearch::antAlgorithm(Graph* newGraphData)
 		for (int j = 0; j < matrixSize; j++) {
 			deltaPheromon[j].resize(matrixSize, 0);
 		}
-		//If wszystkie mrowki znalazly to samo->break zkaoncz, iterationPermutation sprawdzaj kolejne elementy z pierwszym rekordem
-
-		//for (int check = 1; check < numberOfAnts; check++) {//mrowki
-		//	for (int check2 = 0; check2 < matrixSize; check2++) {
-		//		if (iterationPermutations[0][check2] != iterationPermutations[check][check2]) {
-		//			goto exit;
-		//		}
-		//	}
-		//}
-		////Zakoncz algorytm- wszystkie mrowki znalazly jedna droge
-		//break;
-		//exit:;
-
+		//If wszystkie mrowki znalazly to samo->break zkaoncz, sprawdzaj kolejne z pierwszym rekordem
+		for (int check = 1; check < numberOfAnts; check++) {//mrowki
+			for (int check2 = 0; check2 < matrixSize; check2++) {
+				if (iterationPermutations[0][check2] != iterationPermutations[check][check2]) {
+					goto exit;
+				}
+			}
+		}
+		//Zakoncz algorytm- wszystkie mrowki znalazly jedna droge
+		break;
+		exit:;
 		
 	}
-
 	cout << "Result= " << result << "\n" ;
+}
+
+void AntSearch::antAlgorithm(Graph* newGraphData, int paramNumbOfAnts, int paramVariant, float paramAlpha, float paramBeta, double paramQPheromone, double paramRoPheromone, int paramIterations)
+{
+	myGraph = newGraphData;
+	matrixSize = myGraph->getNumbOfVerts();	//to sie nie zmieni w trakcie iteracji nzm
+	numberOfAnts = paramNumbOfAnts;//matrixSize;//nzm
+	qPheromone = paramQPheromone;//matrixSize;//nzm
+	roPheromone = paramRoPheromone;//0.5; //sta³a parowania
+	numberOfAntIterations = paramIterations;//100;//nzm
+	alpha = paramAlpha;
+	beta = paramBeta;
+	variant = paramVariant;
+
+
+	bestSolution = makeRandPermut(matrixSize);//utworzenie startowej permutacji //permutation;
+	result = getValueOfPath(bestSolution);
+	tauZero = (double)matrixSize / (double)result;
+
+	pheromonMatrix.resize(matrixSize);
+	for (int i = 0; i < matrixSize; i++) {
+		pheromonMatrix[i].resize(matrixSize, tauZero);
+	}
+	//Wszedzie jest ju¿ feromon w macierzy feromonów zgodnie ze wskazaniami Dorigo
+	for (int i = 0; i < numberOfAntIterations; i++) {
+		//cout << "ANT ITERATION!-----------: " << i << "\n";
+		deltaPheromon.resize(matrixSize);//to ma sie wyzerowac
+		for (int j = 0; j < matrixSize; j++) {
+			deltaPheromon[j].resize(matrixSize, 0);
+		}
+		iterationPermutations.resize(numberOfAnts);//tutaj pzechowywane bêd¹ œcie¿ki z jednej iteracji pokolenia mrowek
+		for (int j = 0; j < numberOfAnts; j++) {
+			iterationPermutations[j].resize(numberOfAnts, 0);
+		}
+
+		for (int singleAnt = 0; singleAnt < numberOfAnts; singleAnt++) {
+			// tworzymy mrowke, ktora wie juz skad idzie, ma swoj¹ tabu liste, ma swoj numer
+			Ant* myAnt = new Ant(getRandomStart(singleAnt), singleAnt, matrixSize);
+
+			//MrówkaWybieraSobieDrogê w oparciu o graf- widocznosc, feromony zostawione przez przodków
+			iterationPermutations[singleAnt] = antJourney(myAnt);
+
+			//Koniec drogi
+			//wynikiem tego jest jakas permutacja zapisana do Iterationpermutation[i]
+			//Wrzuæ feromony do deltaPheromons
+			updateDeltaPheromones(iterationPermutations[singleAnt]);
+
+			//Jeœli œcie¿ka któr¹ znalazlas < result to bestSolution=sciezka, result=new result
+			if (getValueOfPath(iterationPermutations[singleAnt]) < result) {
+				result = getValueOfPath(iterationPermutations[singleAnt]);
+				bestSolution = iterationPermutations[singleAnt];
+			}
+			delete myAnt;
+		}
+		//Dodaj delta feromony do glownej macierzy feromonów
+		//Paruj feromony
+		updatePheromones();
+
+		//wyczysc deltaPheromones po pokoleniu
+		deltaPheromon.resize(matrixSize);
+		for (int j = 0; j < matrixSize; j++) {
+			deltaPheromon[j].resize(matrixSize, 0);
+		}
+		//If wszystkie mrowki znalazly to samo->break zkaoncz, sprawdzaj kolejne z pierwszym rekordem
+		for (int check = 1; check < numberOfAnts; check++) {//mrowki
+			for (int check2 = 0; check2 < matrixSize; check2++) {
+				if (iterationPermutations[0][check2] != iterationPermutations[check][check2]) {
+					goto exit;
+				}
+			}
+		}
+		//Zakoncz algorytm- wszystkie mrowki znalazly jedna droge
+		break;
+	exit:;
+
+	}
+	//cout << "Result= " << result << "\n";
 }
 
 
@@ -124,23 +193,29 @@ void AntSearch::printResult()
 
 void AntSearch::updateDeltaPheromones(vector<int> path)
 {
-	//QAS
-	for (int i = 0; i < path.size()-1; i++) {
-		deltaPheromon[path[i]][path[i+1]] +=  qPheromone/ (double)myGraph->getValueOfEdge(path[i], path[i + 1]);// wariant QAS
+	switch (variant) {
+	case 1:
+		//QAS
+		for (int i = 0; i < path.size() - 1; i++) {
+			deltaPheromon[path[i]][path[i + 1]] += qPheromone / (double)myGraph->getValueOfEdge(path[i], path[i + 1]);// wariant QAS
+		}
+		deltaPheromon[path[(path.size()) - 1]][path[0]] += qPheromone / (double)myGraph->getValueOfEdge(path[(path.size()) - 1], path[0]);
+		break;
+	case 2:
+		//CAS
+		for (int i = 0; i < path.size() - 1; i++) {
+			deltaPheromon[path[i]][path[i + 1]] += qPheromone / (double)getValueOfPath(path);
+		}
+		deltaPheromon[path[(path.size()) - 1]][path[0]] += qPheromone / (double)getValueOfPath(path);
+		break;
+	case 3:
+		//DAS
+		for (int i = 0; i < path.size() - 1; i++) {
+			deltaPheromon[path[i]][path[i + 1]] += qPheromone ;
+		}
+		deltaPheromon[path[(path.size()) - 1]][path[0]] += qPheromone;
+		break;
 	}
-	deltaPheromon[path[(path.size()) -1]][path[0]] += qPheromone/(double)myGraph->getValueOfEdge(path[(path.size()) -1], path[0]);
-
-	//CAS
-	//for (int i = 0; i < path.size() - 1; i++) {
-	//	deltaPheromon[path[i]][path[i + 1]] += qPheromone / (double)getValueOfPath(path);
-	//}
-	//deltaPheromon[path[(path.size()) - 1]][path[0]] += qPheromone / (double)getValueOfPath(path);
-
-	//DAS
-	//for (int i = 0; i < path.size() - 1; i++) {
-	//	deltaPheromon[path[i]][path[i + 1]] += qPheromone ;
-	//}
-	//deltaPheromon[path[(path.size()) - 1]][path[0]] += qPheromone;
 }
 
 void AntSearch::updatePheromones()
@@ -156,10 +231,9 @@ void AntSearch::updatePheromones()
 
 int AntSearch::getRandomStart(int iteration)
 {
-	return iteration;
+	//return iteration;
 	srand(iteration + time(NULL));
 	return rand()%matrixSize;
-
 }
 
 
@@ -196,6 +270,7 @@ int AntSearch::getNextCity(Ant* Sam)
 			mianownik += 0;
 		}
 		else {
+			//cout<<"myCity: "<<Sam->myCity<<" i : "<<i<<"matrixSize"<<matrixSize<<"\n";
 			if (myGraph->getValueOfEdge(Sam->myCity, i) == 0) {
 				mianownik += 1000000;
 				cout << "A problem :0\n";
@@ -208,7 +283,6 @@ int AntSearch::getNextCity(Ant* Sam)
 			}	
 		}
 	}
-
 
 	for (int i = 0; i < matrixSize; i++) {
 		if (Sam->visitedByMe[i] == true) {
@@ -237,9 +311,23 @@ int AntSearch::getNextCity(Ant* Sam)
 		iter++;
 		sum += probabilities[iter];
 	}
-
+	if (iter>=matrixSize) {
+		//iter = matrixSize - 1;
+		//while (probabilities[iter] == 0) {
+		//	iter--;
+		//	if (iter < 0) {
+		//		cout << "Wielki blad nieprzechwycona sytuacja!!! \n";//podaj cokolwiek co nie na tabu liscie
+		//		break;
+		//	}
+		//}
+		//wychodze a prawdopodobienstwo od itera niezerowe
+		cout << "Wielki bug!!!!\n";
+	}
 	Sam->visitedByMe[iter] = true;//przenioslem sie do kolejnego miasta
 	Sam->myCity = iter;
 
+	probabilities.clear();
 	return iter;
 }
+
+

@@ -310,6 +310,184 @@ void bigSimulationTabu() {
 		}
 	}
 }
+
+void bigSimulationACO(int testNumber) {
+	Graph* testGraph = new Graph(10);
+	AntSearch* testAntSearch = new AntSearch();
+
+	string tab[5] = { "mierzwa13", "data17.txt", "data24.txt", "data58.txt", "data120.txt" };
+	int tabOptimus[] = { 269 , 2085 , 1272 , 25395 , 6942 };
+
+	float test1[5] = { 0.3, 0.5, 1, 1.5, 2 };// *matrixSize przy podaniu paramNumbOfAnts
+	float test2[5] = { 0.5, 1, 2, 3, 4 };// poziom zostawianego feromonu
+	float test3[5] = { 0.1, 0.3 ,0.5, 0.7, 0.9 };// poziom parowania feromonu
+	float test4[5] = { 0.9, 1.01, 1.1, 1.2, 1.3 };// alpha
+	float test5[5] = { 2, 3 ,4, 4.5, 5 };// beta
+
+	switch (testNumber) {
+	case 1:
+		//Obszar testu number of ants
+		//float test1[5] = { 0.3, 0.5, 1, 1.5, 2 };// *matrixSize przy podaniu paramNumbOfAnts
+		for (int k = 0; k < 5; k++) {
+			for (int j = 0; j < 5; j++) {
+				testGraph->loadGraphFromFileS(tab[k]);
+				testAntSearch = new AntSearch();
+				auto startTest = std::chrono::high_resolution_clock::now();
+				testAntSearch->antAlgorithm(testGraph, test1[j] * testGraph->getNumbOfVerts(), 1, 1.1, 4.5, testGraph->getNumbOfVerts(), 0.5, 100);
+				auto endTest = std::chrono::high_resolution_clock::now();
+				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				std::chrono::duration<double> diff = endTest - startTest;
+				std::fstream wyniki;
+				std::string nazwa = "wynikiACO_ants_";
+				std::string nazwa4 = std::to_string(k);
+				//std::string nazwa5 = "_";
+				//std::string nazwa2 = std::to_string(j);
+				std::string nazwa3 = ".txt";
+				nazwa.append(nazwa4);
+				//nazwa.append(nazwa5);
+				//nazwa.append(nazwa2);
+				nazwa.append(nazwa3);
+				//Foramt wynikiACO_ants_NUMERGRAPHU_NUMERPARAMETRU
+				//Foramt wynik numermiasta (dla wsyzstkich parametrow)
+				wyniki.open(nazwa, std::ios::out | std::ios::app);
+				if (wyniki.good() == true) {
+					wyniki << diff.count() << " " << error << std::endl;
+					wyniki.close();
+				}
+			}
+		}
+		break;
+	case 2:
+		//Obszar testu qPheromone
+		//float test2[5] = { 0.5, 1, 2, 3, 4 };// poziom zostawianego feromonu
+		for (int k = 0; k < 5; k++) {
+			for (int j = 0; j < 5; j++) {
+				testGraph->loadGraphFromFileS(tab[k]);
+				testAntSearch = new AntSearch();
+				auto startTest = std::chrono::high_resolution_clock::now();
+				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, 4.5, test2[j]*testGraph->getNumbOfVerts(), 0.5, 100);
+				auto endTest = std::chrono::high_resolution_clock::now();
+				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				std::chrono::duration<double> diff = endTest - startTest;
+				std::fstream wyniki;
+				std::string nazwa = "wynikiACO_qPherom_";
+				std::string nazwa4 = std::to_string(k);
+				//std::string nazwa5 = "_";
+				//std::string nazwa2 = std::to_string(j);
+				std::string nazwa3 = ".txt";
+				nazwa.append(nazwa4);
+				//nazwa.append(nazwa5);
+				//nazwa.append(nazwa2);
+				nazwa.append(nazwa3);
+				//Foramt wynikiACO_ants_NUMERGRAPHU_NUMERPARAMETRU
+				//Foramt wynik numermiasta (dla wsyzstkich parametrow)
+				wyniki.open(nazwa, std::ios::out | std::ios::app);
+				if (wyniki.good() == true) {
+					wyniki << diff.count() << " " << error << std::endl;
+					wyniki.close();
+				}
+			}
+		}
+		break;
+	case 3:
+		//Obszar testu roPheromone
+		//float test3[5] = { 0.1, 0.3 ,0.5, 0.7, 0.9 };// poziom parowania feromonu
+		for (int k = 0; k < 5; k++) {
+			for (int j = 0; j < 5; j++) {
+				testGraph->loadGraphFromFileS(tab[k]);
+				testAntSearch = new AntSearch();
+				auto startTest = std::chrono::high_resolution_clock::now();
+				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, 4.5,  testGraph->getNumbOfVerts(), test3[j], 100);
+				auto endTest = std::chrono::high_resolution_clock::now();
+				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				std::chrono::duration<double> diff = endTest - startTest;
+				std::fstream wyniki;
+				std::string nazwa = "wynikiACO_roPherom_";
+				std::string nazwa4 = std::to_string(k);
+				//std::string nazwa5 = "_";
+				//std::string nazwa2 = std::to_string(j);
+				std::string nazwa3 = ".txt";
+				nazwa.append(nazwa4);
+				//nazwa.append(nazwa5);
+				//nazwa.append(nazwa2);
+				nazwa.append(nazwa3);
+				//Foramt wynikiACO_ants_NUMERGRAPHU_NUMERPARAMETRU
+				//Foramt wynik numermiasta (dla wsyzstkich parametrow)
+				wyniki.open(nazwa, std::ios::out | std::ios::app);
+				if (wyniki.good() == true) {
+					wyniki << diff.count() << " " << error << std::endl;
+					wyniki.close();
+				}
+			}
+		}
+		break;
+	case 4:
+		//Obszar testu alpha
+		//float test4[5] = {0.9, 1.01, 1.1, 1.2, 1.3 };// alpha
+		for (int k = 0; k < 5; k++) {
+			for (int j = 0; j < 5; j++) {
+				testGraph->loadGraphFromFileS(tab[k]);
+				testAntSearch = new AntSearch();
+				auto startTest = std::chrono::high_resolution_clock::now();
+				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, test4[j], 4.5, testGraph->getNumbOfVerts(), 0.5, 100);
+				auto endTest = std::chrono::high_resolution_clock::now();
+				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				std::chrono::duration<double> diff = endTest - startTest;
+				std::fstream wyniki;
+				std::string nazwa = "wynikiACO_alpha_";
+				std::string nazwa4 = std::to_string(k);
+				//std::string nazwa5 = "_";
+				//std::string nazwa2 = std::to_string(j);
+				std::string nazwa3 = ".txt";
+				nazwa.append(nazwa4);
+				//nazwa.append(nazwa5);
+				//nazwa.append(nazwa2);
+				nazwa.append(nazwa3);
+				//Foramt wynikiACO_ants_NUMERGRAPHU_NUMERPARAMETRU
+				//Foramt wynik numermiasta (dla wsyzstkich parametrow)
+				wyniki.open(nazwa, std::ios::out | std::ios::app);
+				if (wyniki.good() == true) {
+					wyniki << diff.count() << " " << error << std::endl;
+					wyniki.close();
+				}
+			}
+		}
+		break;
+	case 5:
+		//Obszar testu beta
+		//float test5[5] = { 2, 3 ,4, 4.5, 5 };// beta
+		for (int k = 0; k < 5; k++) {
+			for (int j = 0; j < 5; j++) {
+				testGraph->loadGraphFromFileS(tab[k]);
+				testAntSearch = new AntSearch();
+				auto startTest = std::chrono::high_resolution_clock::now();
+				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, test5[j],testGraph->getNumbOfVerts(), 0.5, 100);
+				auto endTest = std::chrono::high_resolution_clock::now();
+				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				std::chrono::duration<double> diff = endTest - startTest;
+				std::fstream wyniki;
+				std::string nazwa = "wynikiACO_beta_";
+				std::string nazwa4 = std::to_string(k);
+				//std::string nazwa5 = "_";
+				//std::string nazwa2 = std::to_string(j);
+				std::string nazwa3 = ".txt";
+				nazwa.append(nazwa4);
+				//nazwa.append(nazwa5);
+				//nazwa.append(nazwa2);
+				nazwa.append(nazwa3);
+				//Foramt wynikiACO_ants_NUMERGRAPHU_NUMERPARAMETRU
+				//Foramt wynik numermiasta (dla wsyzstkich parametrow)
+				wyniki.open(nazwa, std::ios::out | std::ios::app);
+				if (wyniki.good() == true) {
+					wyniki << diff.count() << " " << error << std::endl;
+					wyniki.close();
+				}
+			}
+		}
+		break;
+	}
+	
+}
 void mainMenu();
 int main()
 {
@@ -432,7 +610,13 @@ void mainMenu() {
 	Tabu_Search* myTabu = new Tabu_Search();
 	Simulated_Annealing* mySA = new Simulated_Annealing();
 	AntSearch* myAnt = new AntSearch();
-
+	//double parametersTab[]={1,}
+	double programAntNumber = 1;			//liczbaMrowek
+	double programAlpha = 1.1;
+	double programBeta = 4.5;
+	double programRo = 0.5;
+	double programQPher = 1;
+	int programIterations = 100;
 
 	while (userInput != 0) {
 		std::cout << "----Main Menu--------------------\n";
@@ -461,7 +645,11 @@ void mainMenu() {
 			//myTabu->tabuStepByStep(myGraph);
 			//bigSimulationSA();
 			//bigSimulationTabu();
-
+			bigSimulationACO(1);
+			bigSimulationACO(2);
+			bigSimulationACO(3);
+			bigSimulationACO(4);
+			bigSimulationACO(5);
 			std::cout << "koncze wielkie testy!!!!\n";
 			break;
 		case 2:
@@ -491,15 +679,25 @@ void mainMenu() {
 							<< "2. Wyswietl wynik\n"
 							<< "3. Wyswietl graf\n"
 							<< "4. Generuj losowy graf\n"
-							<< "5. Laduj graf z pliku\n";
+							<< "5. Laduj graf z pliku\n"
+							<< "6. Zmien ustawienia algorytmu\n";
 						std::cin >> userInput;
 						switch (userInput)
 						{
 						case 0:
 							break;
 						case 1:
-							//myBF->intitialBrutForce(myGraph);
-							myAnt->antAlgorithm(myGraph);
+
+							//myAnt->antAlgorithm(myGraph);
+							myAnt->antAlgorithm(myGraph,
+								programAntNumber * myGraph->getNumbOfVerts(),//liczba mrowek w oparciu o rozmiar macierzy
+								1,//variant
+								programAlpha,//alfa
+								programBeta,//beta
+								programQPher * myGraph->getNumbOfVerts(),//stala feromonowa
+								programRo,//wspolczynik parowania
+								programIterations//ilosc iteracji
+							);
 							break;
 						case 2:
 							myAnt->printResult();
@@ -516,6 +714,55 @@ void mainMenu() {
 							break;
 						case 5:
 							myGraph->loadGraphFromFile();
+							break;
+						case 6:
+							while (userInput != 0) {
+								//testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, test5[j],testGraph->getNumbOfVerts(), 0.5, 100);
+								std::cout << "- --------Ant Colony Optimization Settings----------------\n";
+								std::cout << "Wybierz opcje :\n"
+									<< "0. Wroc do poprzedniego menu \n"
+									<< "1. Zmień antsNumber = x*matrixSize \n"
+									<< "2. Zmień alpha =x \n"
+									<< "3. Zmień beta = x\n"
+									<< "4. Zmień roPheromone = x\n"
+									<< "5. Zmień qPheromone= x*matrixSize\n"
+									<< "6. Zmień iterations= x\n"
+									<< "7. Wyświetl parametry.\n";
+								std::cin >> userInput;
+								switch (userInput)
+								{
+								case 7:
+									cout << "ACO SETTINGS (*- mnozenie prze zliczbe miast):\n"
+										<< "programAntNumber *=" << programAntNumber << "\n"
+										<< "programAlpha= " << programAlpha << "\n"
+										<< "programBeta= " << programBeta << "\n"
+										<< "programRo= " << programRo << "\n"
+										<< "programQPher *= " << programQPher << "\n"
+										<< "programIterations= " << programIterations << "\n";
+								case 0:
+									break;
+								case 1:
+									cin >> programAntNumber;
+									break;
+								case 2:
+									cin >> programAlpha;
+									break;
+								case 3:
+									cin >> programBeta;
+									break;
+								case 4:
+									cin >> programRo;
+									break;
+								case 5:
+									cin >> programQPher;
+									break;
+								case 6:
+									cin >> programIterations;
+									break;
+								}
+								
+							}
+							userInput = 999;
 							break;
 						}
 					}
