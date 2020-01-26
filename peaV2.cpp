@@ -335,7 +335,7 @@ void bigSimulationACO(int testNumber) {
 				auto startTest = std::chrono::high_resolution_clock::now();
 				testAntSearch->antAlgorithm(testGraph, test1[j] * testGraph->getNumbOfVerts(), 1, 1.1, 4.5, testGraph->getNumbOfVerts(), 0.5, 100);
 				auto endTest = std::chrono::high_resolution_clock::now();
-				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				float error = ((float)tabOptimus[k] - ((float)testAntSearch->result)) / (float)tabOptimus[k];
 				std::chrono::duration<double> diff = endTest - startTest;
 				std::fstream wyniki;
 				std::string nazwa = "wynikiACO_ants_";
@@ -367,7 +367,7 @@ void bigSimulationACO(int testNumber) {
 				auto startTest = std::chrono::high_resolution_clock::now();
 				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, 4.5, test2[j]*testGraph->getNumbOfVerts(), 0.5, 100);
 				auto endTest = std::chrono::high_resolution_clock::now();
-				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				float error = ((float)tabOptimus[k] - ((float)testAntSearch->result)) / (float)tabOptimus[k];
 				std::chrono::duration<double> diff = endTest - startTest;
 				std::fstream wyniki;
 				std::string nazwa = "wynikiACO_qPherom_";
@@ -399,7 +399,7 @@ void bigSimulationACO(int testNumber) {
 				auto startTest = std::chrono::high_resolution_clock::now();
 				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, 4.5,  testGraph->getNumbOfVerts(), test3[j], 100);
 				auto endTest = std::chrono::high_resolution_clock::now();
-				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				float error = ((float)tabOptimus[k] - ((float)testAntSearch->result)) / (float)tabOptimus[k];
 				std::chrono::duration<double> diff = endTest - startTest;
 				std::fstream wyniki;
 				std::string nazwa = "wynikiACO_roPherom_";
@@ -431,7 +431,7 @@ void bigSimulationACO(int testNumber) {
 				auto startTest = std::chrono::high_resolution_clock::now();
 				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, test4[j], 4.5, testGraph->getNumbOfVerts(), 0.5, 100);
 				auto endTest = std::chrono::high_resolution_clock::now();
-				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				float error = ((float)tabOptimus[k]-((float)testAntSearch->result)) / (float)tabOptimus[k];
 				std::chrono::duration<double> diff = endTest - startTest;
 				std::fstream wyniki;
 				std::string nazwa = "wynikiACO_alpha_";
@@ -463,7 +463,7 @@ void bigSimulationACO(int testNumber) {
 				auto startTest = std::chrono::high_resolution_clock::now();
 				testAntSearch->antAlgorithm(testGraph, testGraph->getNumbOfVerts(), 1, 1.1, test5[j],testGraph->getNumbOfVerts(), 0.5, 100);
 				auto endTest = std::chrono::high_resolution_clock::now();
-				float error = ((float)testAntSearch->result) / (float)tabOptimus[k];
+				float error = ((float)tabOptimus[k] - ((float)testAntSearch->result)) / (float)tabOptimus[k];
 				std::chrono::duration<double> diff = endTest - startTest;
 				std::fstream wyniki;
 				std::string nazwa = "wynikiACO_beta_";
